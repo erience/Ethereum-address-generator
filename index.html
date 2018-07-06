@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Ethereum Address</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+	
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <h1>Ethereum Address Generator</h1>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container-fluid" style="margin: 25px 0px;">
+		<button class="btn btn-primary btn-lg" id="button1">Generate!</button>
+	</div>
+
+	<div class="row" style="padding-left: 20px;">
+		<div class="col-sm-12">
+			<h4>Ethereum Address : <span id="address"></span> </h4>
+			<h4>Private Key : <span id="privateKey"></span> </h4>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+
+        $(document).ready(function(){
+            $("#button1").on('click',function(){
+               $.ajax({
+                    url: "", //API goes here. 
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                       $('#address').html(data.address);
+                       $('#privateKey').html(data.privateKey);
+                    }
+                });
+            });
+        })
+
+    </script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
