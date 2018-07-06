@@ -1,6 +1,6 @@
 # Ethereum Address Generator
 
-Generate new Ethereum address-privateKey pairs with HTML-NodeJS with mysql database.
+Generate new Ethereum address-privateKey pairs with HTML-NodeJS and mysql database.
 
 ## Install Node and NPM
 
